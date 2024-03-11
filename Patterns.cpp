@@ -6,6 +6,103 @@ int main() {
   cin >> num;
 
   /*
+  int n;
+  cin >> n;
+
+  int num = n / 2;
+
+  for (int row = 0; row < num; row++) {
+
+    // stars
+    for (int col = 0; col < num - row; col++) {
+      cout << "*";
+    }
+
+    // SPACES
+
+    for (int col = 0; col < 2 * row + 1; col++) {
+      cout << " ";
+    }
+
+    // STARS
+    for (int col = 0; col < num - row; col++) {
+      cout << "*";
+    }
+
+    cout << endl;
+  }
+
+  for (int row = 0; row < num; row++) {
+    // STARS
+    for (int col = 0; col < row + 1; col++) {
+      cout << "*";
+    }
+
+    // SPACES
+
+    for (int col = 0; col < 2 * num - 2 * row - 1; col++) {
+      cout << " ";
+    }
+
+    // STARS
+
+    for (int col = 0; col < row + 1; col++) {
+      cout << "*";
+    }
+    cout << endl;
+  }
+*/
+
+  /*
+    for (int row = 0; row < num; row++) {
+      for (int col = 0; col < num - row - 1; col++) {
+        cout << " ";
+      }
+
+      for (int col = 0; col < row + 1; col++) {
+        if (col == 0 || col == row + 1 - 1) {
+          cout << "* ";
+        } else {
+          cout << "  ";
+        }
+      }
+      cout << endl;
+    }
+
+     for (int row = 0; row < num; row++) {
+        for (int col = 0; col < row; col++) {
+          cout << " ";
+        }
+        int totalCol = num - row;
+        for (int col = 0; col < totalCol; col++) {
+          if (col == 0 || col == totalCol - 1) {
+            cout << "* ";
+          } else {
+            cout << "  ";
+          }
+        }
+        cout << endl;
+      }
+  */
+  // for (int row = 0; row < num; row++) {
+  //   for (int col = 0; col < row; col++) {
+  //     cout << " ";
+  //   }
+  //   int totalCol = num - row;
+  //   for (int col = 0; col < totalCol; col++) {
+  //     if (col == 0 || col == totalCol - 1) {
+  //       cout << "* ";
+  //     } else {
+  //       cout << "  ";
+  //     }
+  //   }
+  //   cout << endl;
+  // }
+
+
+
+
+  /*
     for (int row = 0; row < num; row++) {
       for (int col = 0; col < row; col++) {
         cout << " ";
