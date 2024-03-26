@@ -4,6 +4,57 @@
 #include <vector>
 using namespace std;
 
+// 2643. Row With Maximum Ones
+
+
+vector<int> rowAndMaximumOnes(vector<vector<int>> &mat) {
+  int maxCount = INT_MIN;
+  int n = mat.size();
+  int rowNo;
+  vector<int> ans;
+
+  for (int i = 0; i < n; i++) {
+    int count = 0;
+    for (int j = 0; j < mat[i].size(); j++) {
+      if (mat[i][j] == 1) {
+        count++;
+      }
+    }
+
+    if (count > maxCount) {
+      maxCount = count;
+      rowNo = i;
+    }
+  }
+  ans.push_back(rowNo);
+  ans.push_back(maxCount);
+  return ans;
+}
+
+int main() {
+
+  vector<vector<int>> mat = {{1, 0}, {0, 1}, {1, 1}};
+
+  vector<int> result = rowAndMaximumOnes(mat);
+  for (int i = 0; i < result.size(); i++) {
+    cout << result[i] << " ";
+  }
+  cout << endl;
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 268. Missing Number
     int missingNumber(vector<int>& nums) {
