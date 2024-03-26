@@ -4,25 +4,51 @@
 #include <vector>
 using namespace std;
 
-void sortColour(vector<int> &nums) {
 
-     int n = nums.size();
-  int left = 0, right = n - 1;
-//   int index = 0;
- for (int index = 0; index <= right;) {
-    if (nums[index] == 0) {
-      swap(nums[index], nums[left]);
-      index++;
-      left++;
+void rotate(vector<int> &nums, int k) {
+  int n = nums.size();
 
-    } else if (nums[index] == 2) {
-      swap(nums[index], nums[right]);
-      right--;
-    } else {
-      index++;
-    }
+  vector<int> ans(n);
+  for (int i = 0; i < n; i++) {
+    int newindex = (i + k) % n;
+    ans[newindex] = nums[i];
   }
+  nums = ans;
 }
+
+int main() {
+
+  vector<int> arr = {10, 20, 30, 40, 50, 60};
+  int k = 2;
+  // sortColour(arr);
+
+  rotate(arr, k);
+  for (int num : arr) {
+    cout << num << " ";
+  }
+
+  return 0;
+}
+
+// void sortColour(vector<int> &nums) {
+
+//      int n = nums.size();
+//   int left = 0, right = n - 1;
+// //   int index = 0;
+//  for (int index = 0; index <= right;) {
+//     if (nums[index] == 0) {
+//       swap(nums[index], nums[left]);
+//       index++;
+//       left++;
+
+//     } else if (nums[index] == 2) {
+//       swap(nums[index], nums[right]);
+//       right--;
+//     } else {
+//       index++;
+//     }
+//   }
+// }
 //   while (index <= right) {
 //     if (nums[index] == 0) {
 //       swap(nums[index], nums[left]);
