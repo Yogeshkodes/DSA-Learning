@@ -8,13 +8,13 @@ void sortColour(vector<int> &nums) {
 
      int n = nums.size();
   int left = 0, right = n - 1;
-  int index = 0;
-
-  while (index <= right) {
+//   int index = 0;
+ for (int index = 0; index <= right;) {
     if (nums[index] == 0) {
       swap(nums[index], nums[left]);
-      left++;
       index++;
+      left++;
+
     } else if (nums[index] == 2) {
       swap(nums[index], nums[right]);
       right--;
@@ -22,6 +22,19 @@ void sortColour(vector<int> &nums) {
       index++;
     }
   }
+}
+//   while (index <= right) {
+//     if (nums[index] == 0) {
+//       swap(nums[index], nums[left]);
+//       left++;
+//       index++;
+//     } else if (nums[index] == 2) {
+//       swap(nums[index], nums[right]);
+//       right--;
+//     } else {
+//       index++;
+//     }
+//   }
 
 
 
