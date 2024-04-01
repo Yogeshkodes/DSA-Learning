@@ -127,15 +127,15 @@ int findMissingElement(int arr[], int n) {
 
 int main() {
 
-  int arr[] = {1,2,3,4,5,6,7,8};
+  int arr[] = {10,30,20,30,30,30,30,50};
   //int target = 30;
   int n =8;
 
   cout<<"Missing element is: " << findMissingElement(arr, n);
 
-  // int ans = findTotalOccurence(arr, n, target);
-  // cout << "Ttoal Occ is:  "<< ans << endl;
-  // int ansIndex = findLastOccurence(arr, n, target);
+  int ans = findTotalOccurence(arr, n, target);
+  cout << "Ttoal Occ is:  "<< ans << endl;
+  int ansIndex = findLastOccurence(arr, n, target);
 
   // if(ansIndex == -1) {
   //  cout << "Element not found " << endl;
