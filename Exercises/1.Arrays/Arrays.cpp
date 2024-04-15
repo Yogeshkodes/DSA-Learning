@@ -68,3 +68,54 @@ int isSorted(int n, vector<int> a) {
     }
   }
   return true;
+
+
+// gotta figure it out why its not working...
+  //    for(int i=0; i<n; i++){
+  //     if(a[i+1]<n && a[i] <= a[i+1]){
+
+  //    } else {
+  //      return false;
+  //    }
+  //   }return true;
+}
+
+// Revisit Again
+// 1752. Check if Array Is Sorted and Rotated
+
+//Remove duplicates from Sorted array
+int removeDuplicates(vector<int> &arr, int n) {
+  // Write your code here.
+  int i=0;
+  for(int j=1;j<n;j++){
+    if(arr[i] != arr[j]){
+      i++;
+      arr[i] = arr[j];
+
+    }
+  }return i+1;
+}
+
+// Revisit Again
+// 26. Remove Duplicates from Sorted Array
+
+//Revisit to this Again 
+
+/*#include <bits/stdc++.h> 
+vector<int> rotateArray(vector<int>& arr, int n) {
+    // Write your code here.
+    int temp = arr[0];
+    for(int i=n-1;i<n;i--){
+
+    if(arr[i-1]>=0){
+     arr[i-1] = arr[i];
+    }
+    }
+    arr[n-1] =temp;
+
+    return arr;
+}
+*/
+
+
+//Left rotate an array by D places
