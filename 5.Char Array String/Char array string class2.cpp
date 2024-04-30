@@ -69,3 +69,42 @@ public:
         }return true;
     }
 };
+
+
+
+
+
+
+//* 647. Palindromic Substrings
+
+
+
+class Solution {
+public:
+    int expand(string s , int i , int j){
+        int count = 0;
+
+        while(i>=0 && j<s.length() && s[i] == s[j]){
+            count++;
+            i--;
+            j++;
+        }return count;
+    }
+
+
+    int countSubstrings(string s) {
+        int totalcount = 0;
+
+        for(int center = 0; center< s.length(); center++){
+            int oddAnswer = expand(s,center , center);
+
+            int evenAnswer = expand(s, center, center+1);
+        totalcount = totalcount + oddAnswer + evenAnswer; 
+        }return totalcount ;
+    }
+};
+
+
+//* h.w 1209. Remove All Adjacent Duplicates in String II && 
+//* h.w 539. Minimum Time Difference
+//* h.w  1209. Remove All Adjacent Duplicates in String II
