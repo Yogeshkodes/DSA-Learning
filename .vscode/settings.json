@@ -1,5 +1,7 @@
 {
   "files.associations": {
-    "arrays problem solving": "c"
+    "arrays problem solving": "c",
+    "vector": "cpp",
+    "xstring": "cpp"
   }
 }
